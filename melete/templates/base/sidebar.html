@@ -1,0 +1,55 @@
+{% load static i18n compress%}<!DOCTYPE html>
+<html lang="en">
+  {% include 'partials/head.html' %}
+
+  <body class="" style="height: 100vh;">
+
+    <div class="h-100 d-flex flex-column">
+      {% include 'partials/topbar.html' %}
+      <div class="h-100 d-flex flex-row">
+        <div class="h-100 overflow-auto pl-2 bg-dark text-light" style="width: 200px">
+          <ul class="nav flex-column">
+
+            <li>
+            {% block sidebar-head %}
+
+            {% endblock sidebar-head %}
+            </li>
+
+            {% block sidebar-items %}
+                <li class="nav-item">
+                  <a href="#" class="nav-link active">Sample Nav Item Active</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Sample Nav Item</a>
+                </li>
+            {% endblock sidebar-items %}
+          </ul>
+        </div>
+        <div class=" flex-grow-1 d-flex flex-column">
+          <div class="container-fluid flex-grow-1 overflow-auto">
+
+            {% include 'partials/messages.html' %}
+
+            {% block content %}
+              <p>Use this document as a way to quick start any new project.</p>
+            {% endblock content %}
+          </div>
+
+        </div> <!-- /container -->
+
+      </div>
+
+    </div>
+
+
+    {% block modal %}{% endblock modal %}
+
+    {% block javascript %}
+      {% include 'partials/javascript.html' %}
+    {% endblock javascript %}
+
+    {% block extra_scripts %}{% endblock %}
+
+  </body>
+</html>

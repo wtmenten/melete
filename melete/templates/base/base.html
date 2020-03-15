@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include 'partials/head.html' %}
+
+  <body>
+
+    {% include 'partials/topbar.html' %}
+
+
+    <div class="container">
+      {% include 'partials/messages.html' %}
+
+      {% block content %}
+        <p>Use this document as a way to quick start any new project.</p>
+        <div class="alert alert-danger">A test alert</div>
+        <div class="alert alert-danger">A test alert</div>
+        <div class="alert alert-danger">A test alert</div>
+      {% endblock content %}
+
+    </div> <!-- /container -->
+
+    {% block modal %}{% endblock modal %}
+
+    {% include 'partials/javascript.html' %}
+  </body>
+</html>
+

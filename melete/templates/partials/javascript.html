@@ -1,0 +1,18 @@
+{% load static i18n compress%}
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<!-- Bootstrap JS and its dependencies-->
+{% compress js %}
+<script src="{% static 'js/vendors.js' %}"></script>
+{% endcompress %}
+
+<!-- Your stuff: Third-party javascript libraries go here -->
+<script src="{% static "js/reconnecting-websocket.min.js" %}" type="text/javascript"></script>
+
+<!-- place project specific Javascript in this file -->
+{% compress js %}
+<script src="{% static 'js/project.js' %}"></script>
+{% endcompress %}
+
